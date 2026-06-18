@@ -25,7 +25,7 @@ function validateSearchQuery(query) {
   const result = searchQuerySchema.safeParse(query);
 
   if (!result.success) {
-    const message = result.error.errors[0]?.message || "Invalid search query.";
+    const message = result.error.issues[0]?.message || "Invalid search query.";
     throw ApiError.badRequest(message);
   }
 
