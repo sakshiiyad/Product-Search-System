@@ -1,31 +1,23 @@
+import axios from "axios";
+
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api/products";
 const MAX_QUERY_LENGTH = 100;
 
-// Fetch with consistent error handling - throws Error on failures
-async function request(path, options = {}) {
-  let response;
-  try {
-    response = await fetch(`${BASE_URL}${path}`, {
-      headers: { "Content-Type": "application/json" },
-      ...options,
-    });
-  } catch (networkErr) {
-    throw new Error(
-      "Could not reach the server. Check that the backend is running.",
-    );
-  }
+const client = axios.create({
+  baseURL: BASE_URL,
+  headers: { "Content-Type": "application/json" },
+});
 
-  const body = await response.json().catch(() => null);
+function handleError(err) {
+  const message =
+    axios.isAxiosError(err) && err.response
+      ? (err.response.data?.error?.message ??
+        `Request failed with status ${err.response.status}.`)
+      : "Could not reach the server. Check that the backend is running.";
 
-  if (!response.ok) {
-    const message =
-      body?.error?.message || `Request failed with status ${response.status}.`;
-    throw new Error(message);
-  }
-  return body;
+  throw new Error(message);
 }
 
-// Validate search query before API call
 function validateSearchQuery(query) {
   if (!query || query.trim() === "") {
     throw new Error("Search query cannot be empty.");
@@ -37,11 +29,23 @@ function validateSearchQuery(query) {
   }
 }
 
-// API methods for product operations
 export const productApi = {
-  list: () => request(""),
-  search: (query) => {
+  async list() {
+    try {
+      const response = await client.get("");
+      return response.data;
+    } catch (err) {
+      handleError(err);
+    }
+  },
+
+  async search(query) {
     validateSearchQuery(query);
-    return request(`/search?q=${encodeURIComponent(query)}`);
+    try {
+      const response = await client.get("/search", { params: { q: query } });
+      return response.data;
+    } catch (err) {
+      handleError(err);
+    }
   },
 };
