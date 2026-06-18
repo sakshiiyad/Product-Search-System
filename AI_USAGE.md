@@ -1,0 +1,8 @@
+# Note on AI-Assisted Development
+
+
+I used several AI-assisted development tools during this project, primarily Claude, ChatGPT, and GitHub Copilot. These tools helped with project scaffolding, React and Express code generation, API design discussions, validation logic, testing setup, debugging, and code review. GitHub Copilot was particularly useful for in-editor code suggestions and reducing repetitive coding tasks, while Claude and ChatGPT were used for architecture discussions, implementation alternatives, and reviewing design decisions.
+
+A significant part of the development process involved reviewing, understanding, and refining the generated code rather than accepting it as-is. During implementation, I evaluated several architectural and design decisions, simplified parts of the codebase that felt unnecessarily complex for the scope of the assignment, and removed features that were not directly aligned with the requirements. For example, the initial implementation used manual validation logic, but I chose to replace it with Zod because it provided a cleaner, more maintainable, and centralized approach to request validation. I also simplified frontend state management, removed extra CRUD functionality that was beyond the assignment scope, and focused the application on the core requirements: storing a product catalog, searching by name, displaying results, and handling not-found scenarios.
+
+AI was also useful for discussing trade-offs, reviewing code quality, identifying edge cases, improving validation and error handling, and generating initial test cases. The final implementation reflects a combination of AI-generated suggestions and my own decisions based on project requirements, maintainability, simplicity, and ease of understanding.

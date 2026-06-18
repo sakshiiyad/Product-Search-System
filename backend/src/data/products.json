@@ -1,0 +1,22 @@
+[
+  { "id": "1", "sku": "ELC-1001", "name": "Wireless Bluetooth Headphones", "category": "Electronics", "price": 2499, "stock": 34 },
+  { "id": "2", "sku": "ELC-1002", "name": "Bluetooth Portable Speaker", "category": "Electronics", "price": 1899, "stock": 21 },
+  { "id": "3", "sku": "ELC-1003", "name": "USB-C Fast Charger 65W", "category": "Electronics", "price": 1299, "stock": 50 },
+  { "id": "4", "sku": "ELC-1004", "name": "Mechanical Keyboard - Blue Switch", "category": "Electronics", "price": 3499, "stock": 12 },
+  { "id": "5", "sku": "ELC-1005", "name": "Wireless Optical Mouse", "category": "Electronics", "price": 799, "stock": 60 },
+  { "id": "6", "sku": "KIT-2001", "name": "Stainless Steel Kitchen Knife Set", "category": "Kitchen", "price": 2199, "stock": 18 },
+  { "id": "7", "sku": "KIT-2002", "name": "Non-Stick Frying Pan 28cm", "category": "Kitchen", "price": 999, "stock": 25 },
+  { "id": "8", "sku": "KIT-2003", "name": "Electric Kettle 1.8L", "category": "Kitchen", "price": 1399, "stock": 30 },
+  { "id": "9", "sku": "KIT-2004", "name": "Glass Storage Container Set", "category": "Kitchen", "price": 649, "stock": 40 },
+  { "id": "10", "sku": "FUR-3001", "name": "Ergonomic Office Chair", "category": "Furniture", "price": 8999, "stock": 8 },
+  { "id": "11", "sku": "FUR-3002", "name": "Wooden Study Table", "category": "Furniture", "price": 5499, "stock": 10 },
+  { "id": "12", "sku": "FUR-3003", "name": "Foldable Bookshelf - 5 Tier", "category": "Furniture", "price": 3299, "stock": 14 },
+  { "id": "13", "sku": "STA-4001", "name": "Gel Pen Set - 10 Colors", "category": "Stationery", "price": 199, "stock": 100 },
+  { "id": "14", "sku": "STA-4002", "name": "Spiral Notebook A4 Ruled", "category": "Stationery", "price": 89, "stock": 150 },
+  { "id": "15", "sku": "STA-4003", "name": "Desk Organizer Tray", "category": "Stationery", "price": 349, "stock": 45 },
+  { "id": "16", "sku": "APP-5001", "name": "Cotton Crew Neck T-Shirt", "category": "Apparel", "price": 599, "stock": 80 },
+  { "id": "17", "sku": "APP-5002", "name": "Denim Slim Fit Jeans", "category": "Apparel", "price": 1799, "stock": 35 },
+  { "id": "18", "sku": "APP-5003", "name": "Running Shoes - Lightweight", "category": "Apparel", "price": 2999, "stock": 22 },
+  { "id": "19", "sku": "GRO-6001", "name": "Organic Basmati Rice 5kg", "category": "Groceries", "price": 749, "stock": 60 },
+  { "id": "20", "sku": "GRO-6002", "name": "Cold Pressed Coconut Oil 1L", "category": "Groceries", "price": 429, "stock": 55 }
+]
